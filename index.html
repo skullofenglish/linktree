@@ -8,7 +8,7 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Fonts: Pacifico (Name) & Montserrat / Inter (Subtitles & Buttons) -->
+  <!-- Google Fonts: Pacifico (Name) & Montserrat (Subtitles & Buttons) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Pacifico&display=swap" rel="stylesheet">
@@ -18,10 +18,10 @@
       theme: {
         extend: {
           colors: {
-            burgundy: '#5a0a19',     /* Deep Maroon Top Header */
-            lilacCard: '#ca92cd',    /* Main Lilac / Lavender Card Body */
-            pinkBtn: '#f781b4',      /* Bright Pink Rectangular Buttons */
-            darkText: '#2a0812',     /* Dark Plum / Charcoal Text */
+            burgundy: '#5C0A19',     /* Deep Maroon Top Header */
+            lilacCard: '#C291CB',    /* Main Lilac / Lavender Card Body */
+            pinkBtn: '#F77FB1',      /* Bright Pink Rectangular Buttons */
+            darkText: '#211413',     /* Dark Plum / Charcoal Text */
           },
           fontFamily: {
             script: ['Pacifico', 'cursive'],
@@ -38,8 +38,8 @@
       height: 100%;
       margin: 0;
       padding: 0;
-      background-color: #5a0a19;
-      color: #2a0812;
+      background-color: #5C0A19;
+      color: #211413;
       font-family: 'Montserrat', sans-serif;
       -webkit-font-smoothing: antialiased;
     }
@@ -47,13 +47,13 @@
     /* Floating Animations for Skull & Cat/Panda Stickers */
     @keyframes floatLeftSkull {
       0% { transform: translateY(0px) rotate(-6deg); }
-      50% { transform: translateY(-6px) rotate(-2deg) scale(1.04); }
+      50% { transform: translateY(-7px) rotate(-2deg) scale(1.04); }
       100% { transform: translateY(0px) rotate(-6deg); }
     }
 
     @keyframes floatRightCat {
       0% { transform: translateY(0px) rotate(8deg); }
-      50% { transform: translateY(-5px) rotate(4deg) scale(1.05); }
+      50% { transform: translateY(-6px) rotate(4deg) scale(1.05); }
       100% { transform: translateY(0px) rotate(8deg); }
     }
 
@@ -73,9 +73,9 @@
 
     /* Custom Rectangular Button Styling matching the image */
     .link-btn {
-      background-color: #f781b4;
-      border: 1.5px solid #2a0812;
-      color: #2a0812;
+      background-color: #F77FB1;
+      border: 1.5px solid #211413;
+      color: #211413;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
       transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
@@ -170,7 +170,7 @@
                   this.src = 'images/avatar.png';
                 } else {
                   this.onerror=null;
-                  this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center bg-[#ca92cd] text-darkText font-bold text-2xl\'>Nath Lex</div>';
+                  this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center bg-[#C291CB] text-darkText font-bold text-2xl\'>Nath Lex</div>';
                 }
               "
             />
@@ -199,7 +199,7 @@
 
         <!-- LINK 1: ENTRE EM CONTATO -->
         <a 
-          href="#" 
+          href="https://wa.me/" 
           target="_blank" 
           rel="noopener noreferrer"
           class="link-btn w-full py-3.5 px-4 rounded-none font-sans font-semibold text-xs sm:text-sm tracking-[0.18em] uppercase flex items-center justify-center"
@@ -258,12 +258,3 @@
 
 </body>
 </html>
-```
-
-### O que você verá no editor de código à direita:
-1. **Topo Vinho / Bordô (`#5a0a19`):** Cabeçalho escuro fiel ao topo da sua imagem.
-2. **Corpo Lilás (`#ca92cd`):** Bloco principal arredondado se sobrepondo ao topo.
-3. **Nome Cursivo ("Nath Lex"):** Usando a fonte *Pacifico*.
-4. **Botões Rosa com Texto Sublinhado (`#f781b4`):** Formato retangular fino igualzinho ao da foto.
-5. **Moldura Floral / Ondulada:** Cortando a foto `images/avatar.jpeg` em formato de pétala.
-6. **Stickers Animados:** Caveira no canto inferior esquerdo e gatinho/panda no canto superior direito.
