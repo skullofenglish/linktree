@@ -58,7 +58,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 25%; /* Mude para subir/descer o rosto */
+      object-position: center 25%;
     }
 
     /* Estilo dos Botões */
@@ -99,18 +99,18 @@
     <!-- CARTÃO PRINCIPAL LILÁS -->
     <main class="w-full bg-lilacCard rounded-t-[36px] pt-24 pb-12 px-6 flex-1 flex flex-col items-center text-center relative z-20 shadow-2xl">
 
-      <!-- FOTO + STICKERS (Ancorados DIRETAMENTE no topo do Cartão Lilás) -->
-      <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-40 h-40 sm:w-44 sm:h-44 z-30">
+      <!-- STICKER DO GATINHO (Apoiado diretamente na curva superior do cartão lilás) -->
+      <div class="absolute -top-6 right-8 sm:right-10 z-40 w-16 sm:w-18 fade-in filter drop-shadow-md pointer-events-none">
+        <img 
+          src="images/cat.png" 
+          alt="Gatinho Sticker"
+          class="w-full h-auto object-contain"
+          onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'text-3xl\'>🐱</span>';"
+        />
+      </div>
 
-        <!-- STICKER DO GATINHO (Apoiado na borda do topo do card) -->
-        <div class="absolute -top-2 -right-3 z-40 w-14 sm:w-16 fade-in filter drop-shadow-md">
-          <img 
-            src="images/cat.png" 
-            alt="Gatinho Sticker"
-            class="w-full h-auto object-contain"
-            onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'text-3xl\'>🐱</span>';"
-          />
-        </div>
+      <!-- FOTO + CAVEIRA (Centralizados no topo do cartão lilás) -->
+      <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-40 h-40 sm:w-44 sm:h-44 z-30">
 
         <!-- STICKER DA CAVEIRA (Na parte inferior esquerda da foto) -->
         <div class="absolute bottom-0 -left-4 z-40 w-14 sm:w-16 fade-in filter drop-shadow-md">
