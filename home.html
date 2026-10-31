@@ -11,7 +11,7 @@
     <meta name="author" content="Nath Lex">
     <link rel="canonical" href="https://www.nathlex.com/">
 
-    <!-- Open Graph -->
+    <!-- Open Graph / Redes Sociais -->
     <meta property="og:title" content="Nath Lex | Professora de Inglês">
     <meta property="og:description" content="Aprenda inglês com quem viveu 11 anos na Inglaterra. Mais de 19 anos de experiência em ensino de inglês real e acadêmico.">
     <meta property="og:type" content="website">
@@ -50,7 +50,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(88, 0, 23, 0.95);
+            background-color: rgba(88, 0, 23, 0.96);
             backdrop-filter: blur(8px);
             z-index: 1000;
             border-bottom: 1px solid rgba(255, 255, 255, 0.15);
@@ -65,7 +65,7 @@
         }
 
         .nav-logo-img {
-            height: 50px;
+            height: 52px;
             width: auto;
             display: block;
         }
@@ -86,7 +86,7 @@
         }
 
         .nav-menu li a:hover {
-            opacity: 0.7;
+            opacity: 0.75;
         }
 
         /* Hambúrguer Mobile */
@@ -109,7 +109,7 @@
         .full-width-container {
             width: 100%;
             margin: 0 auto;
-            padding-top: 85px;
+            padding-top: 88px;
         }
 
         .content-wrapper {
@@ -118,24 +118,34 @@
             width: 100%;
         }
 
-        /* TÍTULOS EM PARISIENNE */
+        /* TÍTULOS ESTRITAMENTE EM PARISIENNE */
         h1, h2 {
             font-family: 'Parisienne', cursive, sans-serif !important;
             font-weight: normal;
         }
 
-        /* STICKERS BEM MAIORES E EM DESTAQUE */
-        @keyframes stickerFadeIn {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
+        /* ANIMAÇÃO "BREATHE" SUAVE PARA TODOS OS STICKERS */
+        @keyframes stickerBreathe {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.04);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .sticker-breathe {
+            animation: stickerBreathe 4s ease-in-out infinite;
+            display: inline-block;
         }
 
         .sticker-title {
             height: 90px;
             vertical-align: middle;
             margin-left: 15px;
-            display: inline-block;
-            animation: stickerFadeIn 1s ease-out forwards;
         }
 
         .scroll-reveal {
@@ -178,7 +188,7 @@
         }
 
         .intro-left-body p {
-            font-size: 1.5rem; /* Aumentado significativamente */
+            font-size: 1.5rem;
             margin-bottom: 25px;
             font-family: 'Century Gothic', sans-serif;
             color: #580017;
@@ -205,9 +215,8 @@
             position: absolute;
             right: -35px;
             bottom: -35px;
-            width: 130px; /* Sticker maior */
+            width: 130px;
             z-index: 10;
-            animation: stickerFadeIn 1s ease-out forwards;
         }
 
         /* 2. SEÇÃO FORMAÇÃO */
@@ -317,7 +326,6 @@
 
         .tracker-icon img {
             width: 55px;
-            animation: stickerFadeIn 1s ease-out forwards;
         }
 
         .tracker-info h3 {
@@ -386,7 +394,7 @@
             color: #33103c;
         }
 
-        /* 5. SEÇÃO ALGUNS TRABALHOS */
+        /* 5. SEÇÃO ALGUNS TRABALHOS (Imagens Inteiras Sem Corte) */
         .works-section {
             background-color: #4b134f;
             padding: 100px 60px;
@@ -413,12 +421,10 @@
             align-items: center;
         }
 
-        /* FOTOS EM TAMANHO INTEIRO (SEM CORTES) */
         .work-card img {
             width: 100%;
             max-height: 650px;
-            object-fit: contain; /* Exibe a imagem completa sem cortar */
-            background-color: rgba(255, 255, 255, 0.05); /* Fundo sutil se necessário */
+            object-fit: contain; /* Mostra a imagem completa sem cortes */
             margin-bottom: 25px;
             border-radius: 0;
         }
@@ -442,11 +448,10 @@
             position: absolute;
             bottom: 40px;
             right: 60px;
-            width: 120px; /* Sticker maior */
-            animation: stickerFadeIn 1s ease-out forwards;
+            width: 120px;
         }
 
-        /* 6. SEÇÃO ENTRE EM CONTATO */
+        /* 6. SEÇÃO ENTRE EM CONTATO (DESIGN PROFISSIONAL DE ALTA CONFIANÇA) */
         .contact-section {
             background-color: #f7a8ca;
             color: #580017;
@@ -470,45 +475,65 @@
 
         .contact-left p {
             font-size: 1.5rem;
-            margin-bottom: 40px;
+            margin-bottom: 45px;
             font-family: 'Century Gothic', sans-serif;
             color: #580017;
             line-height: 1.6;
         }
 
-        .contact-links {
+        /* BOTÕES DE CONTATO ELEGANTES E PROFISSIONAIS (CTA CARDS) */
+        .contact-buttons-container {
             display: flex;
             flex-direction: column;
-            gap: 22px;
+            gap: 18px;
+            max-width: 420px;
         }
 
-        .contact-links a {
-            color: #580017;
-            text-decoration: underline;
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #580017;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 18px 30px;
+            font-size: 1.35rem;
             font-weight: bold;
-            font-size: 1.5rem;
             font-family: 'Century Gothic', sans-serif;
-            transition: opacity 0.2s;
+            border-radius: 0; /* Cantos retos */
+            border: 2px solid #580017;
+            box-shadow: 0 4px 15px rgba(88, 0, 23, 0.15);
+            transition: all 0.3s ease;
         }
 
-        .contact-links a:hover {
-            opacity: 0.7;
+        .contact-btn:hover {
+            background-color: transparent;
+            color: #580017;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(88, 0, 23, 0.25);
         }
 
-        .contact-right img {
+        /* FOTO DO COMBOIO 100% INTEIRA (SEM CORTE) */
+        .contact-right {
             width: 100%;
-            height: 580px;
-            object-fit: cover;
-            object-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-right img.contact-train-img {
+            width: 100%;
+            max-height: 600px;
+            object-fit: contain; /* Exibe a imagem inteira sem cortar topo/base */
             border-radius: 0;
+            display: block;
         }
 
         .bow-skull-sticker {
             position: absolute;
-            bottom: 40px;
+            bottom: 35px;
             left: 48%;
-            width: 110px; /* Sticker maior */
-            animation: stickerFadeIn 1s ease-out forwards;
+            width: 110px;
         }
 
         /* RESPONSIVIDADE MOBILE */
@@ -548,7 +573,10 @@
             .education-box {
                 padding: 50px 30px;
             }
-            .work-card[style*="max-width: 50%"], .work-card[style*="max-width: 52%"] {
+            .contact-buttons-container {
+                max-width: 100%;
+            }
+            .work-card[style*="max-width: 50%"], .work-card[style*="max-width: 55%"] {
                 max-width: 100% !important;
             }
         }
@@ -560,7 +588,7 @@
     <header class="site-header">
         <nav class="nav-container" aria-label="Navegação Principal">
             <a href="#intro">
-                <img src="images/skull.png" alt="Logotipo Nath Lex" class="nav-logo-img">
+                <img src="images/skull.png" alt="Logotipo Nath Lex" class="nav-logo-img sticker-breathe">
             </a>
             <button class="hamburger" id="hamburger" aria-label="Abrir Menu">
                 <span></span>
@@ -584,7 +612,7 @@
         <section id="intro" class="intro-section">
             <div class="content-wrapper intro-grid">
                 <div class="intro-left">
-                    <h1>Hi, I'm<br>Nath. <img src="images/skull.png" class="sticker-title" alt="Skull Sticker"></h1>
+                    <h1>Hi, I'm<br>Nath. <img src="images/skull.png" class="sticker-title sticker-breathe" alt="Skull Sticker"></h1>
                     <div class="intro-left-body">
                         <p>Sou professora de inglês há mais de 19 anos.</p>
                         <p>Morei, trabalhei e estudei na Inglaterra por 11 anos, e trago toda a experiência de viver a língua de verdade para te ensinar o inglês da vida real!</p>
@@ -592,7 +620,7 @@
                 </div>
                 <div class="intro-right">
                     <img src="images/nath_profile.jpeg" alt="Foto de perfil da Professora Nath" class="profile-img">
-                    <img src="images/cat.png" alt="Cat Sticker" class="cat-sticker">
+                    <img src="images/cat.png" alt="Cat Sticker" class="cat-sticker sticker-breathe">
                 </div>
             </div>
         </section>
@@ -604,7 +632,7 @@
                 <p class="quote-text">“What we learn with pleasure we never forget.” –<br>Alfred Mercier</p>
             </div>
             <div class="education-box">
-                <h2>Formação <img src="images/bookghost.png" class="sticker-title" alt="Book Ghost Sticker"></h2>
+                <h2>Formação <img src="images/bookghost.png" class="sticker-title sticker-breathe" alt="Book Ghost Sticker"></h2>
                 <p>Diploma da Universidade de Cambridge em ensino de inglês como língua estrangeira para adultos, com especialização em conversação.</p>
                 <p>Além disso, sou graduada em Relações Internacionais e Design Gráfico.</p>
             </div>
@@ -619,7 +647,7 @@
                 <div class="tracker-cards">
                     <div class="tracker-card">
                         <div class="tracker-icon">
-                            <img src="images/ghost1.png" alt="Ghost Ícone 1">
+                            <img src="images/ghost1.png" alt="Ghost Ícone 1" class="sticker-breathe">
                         </div>
                         <div class="tracker-info">
                             <h3>Conversação</h3>
@@ -629,7 +657,7 @@
 
                     <div class="tracker-card">
                         <div class="tracker-icon">
-                            <img src="images/ghost2.png" alt="Ghost Ícone 2">
+                            <img src="images/ghost2.png" alt="Ghost Ícone 2" class="sticker-breathe">
                         </div>
                         <div class="tracker-info">
                             <h3>Business English</h3>
@@ -639,7 +667,7 @@
 
                     <div class="tracker-card">
                         <div class="tracker-icon">
-                            <img src="images/ghost3.png" alt="Ghost Ícone 3">
+                            <img src="images/ghost3.png" alt="Ghost Ícone 3" class="sticker-breathe">
                         </div>
                         <div class="tracker-info">
                             <h3>Inglês Acadêmico</h3>
@@ -653,7 +681,7 @@
         <!-- 4. EXPERIÊNCIA -->
         <section id="experiencia" class="experience-section scroll-reveal">
             <div class="content-wrapper">
-                <h2>Experiência <img src="images/bookmark.png" class="sticker-title" alt="Bookmark Sticker"></h2>
+                <h2>Experiência <img src="images/bookmark.png" class="sticker-title sticker-breathe" alt="Bookmark Sticker"></h2>
                 <div class="experience-grid">
                     <div class="exp-card">
                         <img src="images/exp1.jpeg" alt="Professora em Universidades">
@@ -674,7 +702,7 @@
             </div>
         </section>
 
-        <!-- 5. ALGUNS TRABALHOS (Imagens Inteiras Sem Corte) -->
+        <!-- 5. ALGUNS TRABALHOS (Fotos Inteiras Sem Corte) -->
         <section id="trabalhos" class="works-section scroll-reveal">
             <div class="content-wrapper">
                 <h2>Alguns Trabalhos</h2>
@@ -710,29 +738,29 @@
                     </div>
                 </div>
             </div>
-            <img src="images/laycat.png" alt="Laycat Sticker" class="laycat-sticker">
+            <img src="images/laycat.png" alt="Laycat Sticker" class="laycat-sticker sticker-breathe">
         </section>
 
-        <!-- 6. ENTRE EM CONTATO -->
+        <!-- 6. ENTRE EM CONTATO (CORRIGIDO E PROFISSIONAL) -->
         <section id="contato" class="contact-section scroll-reveal">
             <div class="content-wrapper contact-grid">
                 <div class="contact-left">
                     <h2>Entre em<br>Contato</h2>
                     <p>E aproveite todas as portas que o inglês pode abrir!</p>
                     
-                    <div class="contact-links">
-                        <a href="https://www.instagram.com/nathlex/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                        <a href="https://www.linkedin.com/in/nathalia-lex/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                    <div class="contact-buttons-container">
+                        <a href="https://www.instagram.com/nathlex/" target="_blank" rel="noopener noreferrer" class="contact-btn">Instagram</a>
+                        <a href="https://www.linkedin.com/in/nathalia-lex/" target="_blank" rel="noopener noreferrer" class="contact-btn">LinkedIn</a>
+                        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="contact-btn">WhatsApp</a>
                     </div>
                 </div>
                 
                 <div class="contact-right">
-                    <img src="images/contact_train.jpeg" alt="Metro de Londres no Contato">
+                    <img src="images/contact_train.jpeg" alt="Comboio de Londres no Contato" class="contact-train-img">
                 </div>
             </div>
 
-            <img src="images/bow_skull.png" alt="Bow Skull Sticker" class="bow-skull-sticker">
+            <img src="images/bow_skull.png" alt="Bow Skull Sticker" class="bow-skull-sticker sticker-breathe">
         </section>
 
     </div>
