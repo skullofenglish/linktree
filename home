@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi, I'm Nath</title>
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700&family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #580017;
+            color: #ffffff;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #580017;
+        }
+
+        /* Estilos dos Títulos */
+        h1, h2 {
+            font-family: 'Pacifico', cursive;
+            font-weight: normal;
+        }
+
+        .sticker {
+            height: 35px;
+            vertical-align: middle;
+            margin-left: 8px;
+            display: inline-block;
+        }
+
+        /* Seção 1: Topo / Intro */
+        .intro-section {
+            background-color: #f7a8ca;
+            color: #580017;
+            padding: 40px 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .intro-left h1 {
+            font-size: 2.8rem;
+            color: #580017;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .intro-right p {
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        /* Seção Foto Profil & Sticker */
+        .profile-container {
+            background-color: #f7a8ca;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .panda-sticker {
+            position: absolute;
+            right: 20%;
+            bottom: 20px;
+            width: 45px;
+        }
+
+        /* Seção Formação */
+        .education-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .quote-box {
+            background-color: #1a1a1a;
+            padding: 40px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .quote-box img {
+            width: 100%;
+            max-height: 220px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #ffffff;
+            line-height: 1.4;
+        }
+
+        .education-box {
+            background-color: #bf8fcd;
+            color: #33103c;
+            padding: 40px 30px;
+        }
+
+        .education-box h2 {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            color: #33103c;
+        }
+
+        .education-box p {
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+        }
+
+        /* Seção Progress Tracker */
+        .tracker-section {
+            background-color: #580017;
+            padding: 40px 30px;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .tracker-title h2 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            line-height: 1.1;
+        }
+
+        .tracker-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .tracker-card {
+            background-color: #bf8fcd;
+            color: #33103c;
+            border-radius: 8px;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .tracker-icon {
+            width: 45px;
+            height: 45px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .tracker-icon img {
+            width: 25px;
+        }
+
+        .tracker-info h3 {
+            font-size: 0.95rem;
+            margin-bottom: 3px;
+        }
+
+        .tracker-info p {
+            font-size: 0.75rem;
+        }
+
+        /* Seção Experiência */
+        .experience-section {
+            background-color: #f7a8ca;
+            padding: 40px 20px;
+            text-align: center;
+            color: #580017;
+        }
+
+        .experience-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .exp-card {
+            background-color: #bf8fcd;
+            padding: 15px;
+            border-radius: 4px;
+            color: #33103c;
+            text-align: center;
+        }
+
+        .exp-card img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 12px;
+            border-radius: 2px;
+        }
+
+        .exp-card h3 {
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+        }
+
+        .exp-card p {
+            font-size: 0.7rem;
+            line-height: 1.3;
+        }
+
+        /* Seção Alguns Trabalhos */
+        .works-section {
+            background-color: #4b134f;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .works-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            color: #ffffff;
+        }
+
+        .works-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .work-card {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .work-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        .work-card p {
+            font-size: 0.75rem;
+            color: #e0d0e8;
+        }
+
+        .work-card span {
+            display: block;
+            font-size: 0.7rem;
+            color: #bfa0cb;
+            margin-top: 5px;
+        }
+
+        /* Seção Entre em Contato */
+        .contact-section {
+            background-color: #f7a8ca;
+            color: #580017;
+            padding: 40px 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            position: relative;
+        }
+
+        .contact-left h2 {
+            font-size: 2.5rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .contact-left p {
+            font-size: 0.85rem;
+            margin-bottom: 30px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .contact-links a {
+            color: #580017;
+            text-decoration: underline;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+        }
+
+        .contact-links a:hover {
+            opacity: 0.7;
+        }
+
+        .contact-right img {
+            width: 100%;
+            height: 100%;
+            min-height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .footer-sticker {
+            position: absolute;
+            bottom: 15px;
+            left: 45%;
+            width: 40px;
+        }
+
+        /* Responsividade para Celulares */
+        @media (max-width: 600px) {
+            .intro-section, .education-grid, .tracker-section, .experience-grid, .works-grid, .contact-section {
+                grid-template-columns: 1fr;
+            }
+            .profile-img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- 1. INTRODUÇÃO -->
+        <section class="intro-section">
+            <div class="intro-left">
+                <h1>Hi, I'm<br>Nath. <img src="images/skull.png" class="sticker" alt="sticker"></h1>
+            </div>
+            <div class="intro-right">
+                <p>Sou professora de inglês há mais de 17 anos.</p>
+                <p>Afinal, de que adianta estudar inglês por 10 anos, e pegar toda a experiência de viver a língua de verdade para ensinar o inglês do dia a dia?</p>
+            </div>
+        </section>
+
+        <!-- FOTO PERFIL -->
+        <section class="profile-container">
+            <img src="images/avatar.jpg" alt="Nath Profile" class="profile-img">
+            <img src="images/panda.png" alt="Panda Sticker" class="panda-sticker">
+        </section>
+
+        <!-- 2. FORMAÇÃO -->
+        <section class="education-grid">
+            <div class="quote-box">
+                <img src="images/train.jpg" alt="London Train">
+                <p class="quote-text">“What we learn with pleasure we never forget.” –<br>Alfred Mercier</p>
+            </div>
+            <div class="education-box">
+                <h2>Formação <img src="images/bat.png" class="sticker" alt="sticker"></h2>
+                <p>Sistema da Universidade de Cambridge em ensino de inglês como língua estrangeira para adultos, com especialização em conversação.</p>
+                <p>Além disso, sou graduada em Relações Internacionais e Design Gráfico.</p>
+            </div>
+        </section>
+
+        <!-- 3. PROGRESS TRACKER -->
+        <section class="tracker-section">
+            <div class="tracker-title">
+                <h2>Progress<br>Tracker</h2>
+            </div>
+            <div class="tracker-cards">
+                <div class="tracker-card">
+                    <div class="tracker-icon">
+                        <img src="images/skull.png" alt="icon">
+                    </div>
+                    <div class="tracker-info">
+                        <h3>Conversação</h3>
+                        <p>Com auxílio de áudios reais e gravações próprias, aprenda o inglês real que você precisa saber no seu dia a dia.</p>
+                    </div>
+                </div>
+
+                <div class="tracker-card">
+                    <div class="tracker-icon">
+                        <img src="images/skull.png" alt="icon">
+                    </div>
+                    <div class="tracker-info">
+                        <h3>Business English</h3>
+                        <p>Inglês focado no seu ambiente profissional: reuniões, apresentações e comunicação corporativa.</p>
+                    </div>
+                </div>
+
+                <div class="tracker-card">
+                    <div class="tracker-icon">
+                        <img src="images/skull.png" alt="icon">
+                    </div>
+                    <div class="tracker-info">
+                        <h3>Inglês Acadêmico</h3>
+                        <p>Preparatório para TOEFL, IELTS e produções de artigos acadêmicos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. EXPERIÊNCIA -->
+        <section class="experience-section">
+            <h2>Experiência <img src="images/bat.png" class="sticker" alt="sticker"></h2>
+            <div class="experience-grid">
+                <div class="exp-card">
+                    <img src="images/exp1.jpg" alt="Professora em Universidades">
+                    <h3>Professora em Universidades</h3>
+                    <p>Ao longo dos anos, ministrou aulas nas melhores faculdades de línguas e literatura do país.</p>
+                </div>
+                <div class="exp-card">
+                    <img src="images/exp2.jpg" alt="Especialista em Educação">
+                    <h3>Especialista em Educação</h3>
+                    <p>Foco constante em estratégias e métodos de ensino validados para o rápido aprendizado.</p>
+                </div>
+                <div class="exp-card">
+                    <img src="images/exp3.jpg" alt="Inglês como Língua Estrangeira">
+                    <h3>Inglês como Língua Estrangeira</h3>
+                    <p>Mais de 10 mil horas de aulas lecionadas de forma prática e acolhedora.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. ALGUNS TRABALHOS -->
+        <section class="works-section">
+            <h2>Alguns Trabalhos <img src="images/cat.png" class="sticker" alt="sticker"></h2>
+            <div class="works-grid">
+                <div class="work-card">
+                    <img src="images/work1.jpg" alt="Work 1">
+                    <p>Aulas sobre como criar apresentações acadêmicas</p>
+                    <span>University for the Creative Arts, London 2024</span>
+                </div>
+
+                <div class="work-card">
+                    <img src="images/work2.jpg" alt="Work 2">
+                    <p>Aulas de inglês para alunos [...]</p>
+                    <span>English Pathways, London 2022</span>
+                </div>
+
+                <div class="work-card">
+                    <img src="images/work3.jpg" alt="Work 3">
+                    <p>Material de prática e revisão para alunos de inglês</p>
+                    <span>About Us Online, London 2022</span>
+                </div>
+
+                <div class="work-card">
+                    <img src="images/work4.jpg" alt="Work 4">
+                    <p>Workshops de comunicação para entrevistas de emprego</p>
+                    <span>Ministry of Justice UK, 2021</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. ENTRE EM CONTATO -->
+        <section class="contact-section">
+            <div class="contact-left">
+                <h2>Entre em<br>Contato</h2>
+                <p>Para onde levar os planos que você tem para a sua carreira?</p>
+                
+                <!-- SEÇÃO COM OS LINKS DE CONTATO CONFIGURÁVEIS -->
+                <div class="contact-links">
+                    <a href="https://instagram.com/seu_usuario" target="_blank">Instagram</a>
+                    <a href="https://linkedin.com/in/seu_usuario" target="_blank">LinkedIn</a>
+                    <a href="https://wa.me/5500000000000" target="_blank">WhatsApp</a>
+                </div>
+            </div>
+            
+            <div class="contact-right">
+                <img src="images/contact_train.jpg" alt="Contact Train">
+            </div>
+
+            <img src="images/bow_skull.png" alt="Bow Skull Sticker" class="footer-sticker">
+        </section>
+
+    </div>
+
+</body>
+</html>
