@@ -289,7 +289,7 @@
             line-height: 1.75;
         }
 
-        /* 3. SEÇÃO ESPECIALIDADES */
+        /* 3. SEÇÃO ESPECIALIDADES (FANTASMAS BEM MAIORES E PROPORCIONAIS) */
         .tracker-section {
             background-color: #6B0F1A;
             padding: 100px 60px;
@@ -318,16 +318,16 @@
             background-color: #D8B4D9;
             color: #502064;
             border-radius: 0;
-            padding: 35px 40px;
+            padding: 40px 45px;
             display: flex;
-            align-items: flex-start;
-            gap: 30px;
+            align-items: center; /* Alinhamento central vertical ideal para o ícone grande */
+            gap: 35px;
         }
 
         .tracker-icon {
-            width: 80px;
-            height: 80px;
-            background-color: transparent; /* Fundo transparente para manter o PNG limpo */
+            width: 110px; /* Bloco dimensionado para acomodar o sticker grande */
+            height: 110px;
+            background-color: transparent;
             border-radius: 0;
             display: flex;
             justify-content: center;
@@ -336,19 +336,21 @@
         }
 
         .tracker-icon img {
-            width: 55px;
+            width: 95px; /* Fantasmas bem grandes e proporcionais ao card */
+            max-height: 100px;
+            object-fit: contain;
         }
 
         .tracker-info h3 {
-            font-size: 1.6rem;
-            margin-bottom: 12px;
+            font-size: 1.7rem;
+            margin-bottom: 10px;
             font-weight: bold;
             font-family: 'Century Gothic', sans-serif;
             color: #502064;
         }
 
         .tracker-info p {
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             font-family: 'Century Gothic', sans-serif;
             color: #502064;
             line-height: 1.6;
@@ -608,24 +610,24 @@
                 padding: 50px 25px;
             }
 
-            /* OTIMIZAÇÃO DOS CARDS DE ESPECIALIDADES NO MOBILE */
+            /* OTIMIZAÇÃO DOS CARDS E FANTASMAS MAIORES NO MOBILE */
             .tracker-card {
-                padding: 24px 20px;
-                gap: 18px;
+                padding: 28px 24px;
+                gap: 20px;
             }
             .tracker-icon {
-                width: 60px;
-                height: 60px;
+                width: 85px;
+                height: 85px;
             }
             .tracker-icon img {
-                width: 40px;
+                width: 75px;
             }
             .tracker-info h3 {
-                font-size: 1.35rem;
+                font-size: 1.4rem;
                 margin-bottom: 8px;
             }
             .tracker-info p {
-                font-size: 1.1rem;
+                font-size: 1.15rem;
                 line-height: 1.6;
             }
 
