@@ -7,9 +7,14 @@
     <!-- Fontes do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700&family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
 
     <style>
+        @font-face {
+            font-family: 'Harlow Solid';
+            src: local('Harlow Solid'), local('Harlow Solid Italic');
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -17,21 +22,23 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Century Gothic', sans-serif;
             background-color: #580017;
             color: #ffffff;
             line-height: 1.5;
         }
 
+        /* Container principal mais largo no desktop e adaptável no mobile */
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             background-color: #580017;
+            width: 100%;
         }
 
-        /* Estilos dos Títulos */
+        /* Estilos dos Títulos com Pinyon Script */
         h1, h2 {
-            font-family: 'Pacifico', cursive;
+            font-family: 'Pinyon Script', cursive;
             font-weight: normal;
         }
 
@@ -46,45 +53,46 @@
         .intro-section {
             background-color: #f7a8ca;
             color: #580017;
-            padding: 40px 30px;
+            padding: 50px 40px;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 30px;
             align-items: center;
         }
 
         .intro-left h1 {
-            font-size: 2.8rem;
+            font-size: 4rem;
             color: #580017;
-            line-height: 1.2;
+            line-height: 1.1;
             margin-bottom: 10px;
         }
 
         .intro-right p {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             margin-bottom: 15px;
+            font-family: 'Century Gothic', sans-serif;
         }
 
         /* Seção Foto Profil & Sticker */
         .profile-container {
             background-color: #f7a8ca;
             text-align: center;
-            padding: 20px 0;
+            padding: 25px 0;
             position: relative;
         }
 
         .profile-img {
-            width: 250px;
-            height: 250px;
+            width: 280px;
+            height: 280px;
             object-fit: cover;
-            border-radius: 4px;
+            border-radius: 6px;
         }
 
         .panda-sticker {
             position: absolute;
-            right: 20%;
-            bottom: 20px;
-            width: 45px;
+            right: 25%;
+            bottom: 25px;
+            width: 50px;
         }
 
         /* Seção Formação */
@@ -95,7 +103,7 @@
 
         .quote-box {
             background-color: #1a1a1a;
-            padding: 40px 20px;
+            padding: 50px 30px;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -105,15 +113,16 @@
 
         .quote-box img {
             width: 100%;
-            max-height: 220px;
+            max-height: 240px;
             object-fit: cover;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
+        /* Citação com Harlow Solid (com fallback para fontes cursivas elegantes) */
         .quote-text {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Harlow Solid', 'Harlow Solid Italic', 'Pinyon Script', cursive;
             font-style: italic;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             color: #ffffff;
             line-height: 1.4;
         }
@@ -121,32 +130,33 @@
         .education-box {
             background-color: #bf8fcd;
             color: #33103c;
-            padding: 40px 30px;
+            padding: 50px 40px;
         }
 
         .education-box h2 {
-            font-size: 2.2rem;
+            font-size: 3rem;
             margin-bottom: 25px;
             color: #33103c;
         }
 
         .education-box p {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             margin-bottom: 20px;
+            font-family: 'Century Gothic', sans-serif;
         }
 
         /* Seção Progress Tracker */
         .tracker-section {
             background-color: #580017;
-            padding: 40px 30px;
+            padding: 50px 40px;
             display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 20px;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 30px;
             align-items: flex-start;
         }
 
         .tracker-title h2 {
-            font-size: 2.5rem;
+            font-size: 3.5rem;
             color: #ffffff;
             line-height: 1.1;
         }
@@ -161,15 +171,15 @@
             background-color: #bf8fcd;
             color: #33103c;
             border-radius: 8px;
-            padding: 15px 20px;
+            padding: 18px 22px;
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 18px;
         }
 
         .tracker-icon {
-            width: 45px;
-            height: 45px;
+            width: 50px;
+            height: 50px;
             background-color: #ffffff;
             border-radius: 50%;
             display: flex;
@@ -179,84 +189,90 @@
         }
 
         .tracker-icon img {
-            width: 25px;
+            width: 28px;
         }
 
         .tracker-info h3 {
-            font-size: 0.95rem;
-            margin-bottom: 3px;
+            font-size: 1rem;
+            margin-bottom: 4px;
+            font-weight: bold;
+            font-family: 'Century Gothic', sans-serif;
         }
 
         .tracker-info p {
-            font-size: 0.75rem;
+            font-size: 0.8rem;
+            font-family: 'Century Gothic', sans-serif;
         }
 
         /* Seção Experiência */
         .experience-section {
             background-color: #f7a8ca;
-            padding: 40px 20px;
+            padding: 50px 30px;
             text-align: center;
             color: #580017;
         }
 
         .experience-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
+            font-size: 3.5rem;
+            margin-bottom: 35px;
         }
 
         .experience-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
+            gap: 20px;
         }
 
         .exp-card {
             background-color: #bf8fcd;
-            padding: 15px;
-            border-radius: 4px;
+            padding: 20px;
+            border-radius: 6px;
             color: #33103c;
             text-align: center;
         }
 
         .exp-card img {
             width: 100%;
-            height: 100px;
+            height: 120px;
             object-fit: cover;
-            margin-bottom: 12px;
-            border-radius: 2px;
+            margin-bottom: 15px;
+            border-radius: 4px;
         }
 
         .exp-card h3 {
-            font-size: 0.85rem;
-            margin-bottom: 8px;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-family: 'Century Gothic', sans-serif;
         }
 
         .exp-card p {
-            font-size: 0.7rem;
-            line-height: 1.3;
+            font-size: 0.75rem;
+            line-height: 1.4;
+            font-family: 'Century Gothic', sans-serif;
         }
 
         /* Seção Alguns Trabalhos */
         .works-section {
             background-color: #4b134f;
-            padding: 40px 20px;
+            padding: 50px 30px;
             text-align: center;
         }
 
         .works-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 25px;
+            font-size: 3.5rem;
+            margin-bottom: 35px;
             color: #ffffff;
         }
 
         .works-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 25px;
         }
 
         .work-card {
-            padding: 15px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -264,57 +280,61 @@
 
         .work-card img {
             width: 100%;
-            height: 180px;
+            height: 220px;
             object-fit: cover;
             margin-bottom: 15px;
-            border-radius: 4px;
+            border-radius: 6px;
         }
 
         .work-card p {
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             color: #e0d0e8;
+            font-family: 'Century Gothic', sans-serif;
         }
 
         .work-card span {
             display: block;
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             color: #bfa0cb;
             margin-top: 5px;
+            font-family: 'Century Gothic', sans-serif;
         }
 
         /* Seção Entre em Contato */
         .contact-section {
             background-color: #f7a8ca;
             color: #580017;
-            padding: 40px 30px;
+            padding: 50px 40px;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 30px;
             position: relative;
         }
 
         .contact-left h2 {
-            font-size: 2.5rem;
+            font-size: 3.5rem;
             line-height: 1.1;
             margin-bottom: 20px;
         }
 
         .contact-left p {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             margin-bottom: 30px;
+            font-family: 'Century Gothic', sans-serif;
         }
 
         .contact-links {
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 12px;
         }
 
         .contact-links a {
             color: #580017;
             text-decoration: underline;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            font-family: 'Century Gothic', sans-serif;
             transition: opacity 0.2s;
         }
 
@@ -325,26 +345,32 @@
         .contact-right img {
             width: 100%;
             height: 100%;
-            min-height: 200px;
+            min-height: 250px;
             object-fit: cover;
-            border-radius: 4px;
+            border-radius: 6px;
         }
 
         .footer-sticker {
             position: absolute;
-            bottom: 15px;
+            bottom: 20px;
             left: 45%;
-            width: 40px;
+            width: 45px;
         }
 
-        /* Responsividade para Celulares */
-        @media (max-width: 600px) {
+        /* Responsividade para Celulares e Tablets */
+        @media (max-width: 768px) {
             .intro-section, .education-grid, .tracker-section, .experience-grid, .works-grid, .contact-section {
                 grid-template-columns: 1fr;
             }
+            .intro-left h1 {
+                font-size: 3rem;
+            }
+            .education-box h2, .tracker-title h2, .experience-section h2, .works-section h2, .contact-left h2 {
+                font-size: 2.8rem;
+            }
             .profile-img {
-                width: 200px;
-                height: 200px;
+                width: 220px;
+                height: 220px;
             }
         }
     </style>
@@ -479,11 +505,11 @@
                 <h2>Entre em<br>Contato</h2>
                 <p>Para onde levar os planos que você tem para a sua carreira?</p>
                 
-                <!-- SEÇÃO COM OS LINKS DE CONTATO CONFIGURÁVEIS -->
+                <!-- LINKS DE CONTATO CORRETOS -->
                 <div class="contact-links">
-                    <a href="https://instagram.com/seu_usuario" target="_blank">Instagram</a>
-                    <a href="https://linkedin.com/in/seu_usuario" target="_blank">LinkedIn</a>
-                    <a href="https://wa.me/5500000000000" target="_blank">WhatsApp</a>
+                    <a href="https://www.instagram.com/nathlex/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.linkedin.com/in/nathalia-lex/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">WhatsApp</a>
                 </div>
             </div>
             
