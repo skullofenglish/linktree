@@ -327,7 +327,7 @@
         .tracker-icon {
             width: 80px;
             height: 80px;
-            background-color: #ffffff;
+            background-color: transparent; /* Fundo transparente para manter o PNG limpo */
             border-radius: 0;
             display: flex;
             justify-content: center;
@@ -569,7 +569,7 @@
             display: inline-block;
         }
 
-        /* RESPONSIVIDADE MOBILE */
+        /* RESPONSIVIDADE MOBILE OTIMIZADA */
         @media (max-width: 900px) {
             .nav-container {
                 padding: 15px 30px;
@@ -593,6 +593,7 @@
             }
             .intro-grid, .education-grid, .tracker-grid, .experience-grid, .works-grid, .contact-grid {
                 grid-template-columns: 1fr;
+                gap: 40px;
             }
             .intro-left h1, .education-box h2, .tracker-title h2, .experience-section h2, .works-section h2, .contact-left h2 {
                 font-size: 4.5rem;
@@ -601,11 +602,33 @@
                 font-size: 1.6rem;
             }
             .intro-section, .tracker-section, .experience-section, .works-section, .contact-section {
-                padding: 60px 30px;
+                padding: 60px 25px;
             }
             .education-box {
-                padding: 50px 30px;
+                padding: 50px 25px;
             }
+
+            /* OTIMIZAÇÃO DOS CARDS DE ESPECIALIDADES NO MOBILE */
+            .tracker-card {
+                padding: 24px 20px;
+                gap: 18px;
+            }
+            .tracker-icon {
+                width: 60px;
+                height: 60px;
+            }
+            .tracker-icon img {
+                width: 40px;
+            }
+            .tracker-info h3 {
+                font-size: 1.35rem;
+                margin-bottom: 8px;
+            }
+            .tracker-info p {
+                font-size: 1.1rem;
+                line-height: 1.6;
+            }
+
             .contact-buttons-container {
                 max-width: 100%;
             }
