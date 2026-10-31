@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hi, I'm Nath</title>
     
-    <!-- Google Fonts: Pinyon Script para os Títulos & Oleo Script como fallback da Harlow Solid -->
+    <!-- Google Fonts: Pinyon Script para Títulos & Oleo Script como fallback da Harlow Solid -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Pinyon+Script&display=swap" rel="stylesheet">
@@ -32,13 +32,11 @@
             overflow-x: hidden;
         }
 
-        /* Container principal 100% da largura da tela */
         .full-width-container {
             width: 100%;
             margin: 0 auto;
         }
 
-        /* Envolvente para manter conteúdos centralizados com margens internas */
         .content-wrapper {
             max-width: 1200px;
             margin: 0 auto;
@@ -51,14 +49,33 @@
             font-weight: normal;
         }
 
+        /* Animação de Fade-In para Stickers */
+        @keyframes stickerFadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
         .sticker {
             height: 40px;
             vertical-align: middle;
             margin-left: 8px;
             display: inline-block;
+            animation: stickerFadeIn 1s ease-out forwards;
         }
 
-        /* 1. SEÇÃO INTRODUÇÃO (FULL WIDTH) */
+        /* Efeito de Scroll Reveal (Aparece apenas ao descer a página pela primeira vez) */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 1. SEÇÃO INTRODUÇÃO */
         .intro-section {
             background-color: #f7a8ca;
             color: #580017;
@@ -85,7 +102,7 @@
             color: #580017;
         }
 
-        /* FOTO DE PERFIL / AVATAR EM 100% DA LARGURA */
+        /* FOTO DE PERFIL EM 100% DA LARGURA */
         .profile-full-width {
             width: 100%;
             position: relative;
@@ -100,15 +117,16 @@
             display: block;
         }
 
-        .panda-sticker {
+        .cat-sticker {
             position: absolute;
             right: 15%;
             bottom: 30px;
             width: 65px;
             z-index: 10;
+            animation: stickerFadeIn 1s ease-out forwards;
         }
 
-        /* 2. SEÇÃO FORMAÇÃO (FULL WIDTH) */
+        /* 2. SEÇÃO FORMAÇÃO */
         .education-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -123,9 +141,10 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
 
-        .quote-box img {
+        .quote-box img.train-img {
             width: 100%;
             max-width: 500px;
             max-height: 300px;
@@ -134,7 +153,15 @@
             border-radius: 4px;
         }
 
-        /* ESTRITAMENTE HARLOW SOLID APENAS NATA FRASE */
+        .cat4-sticker {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 45px;
+            animation: stickerFadeIn 1s ease-out forwards;
+        }
+
+        /* ESTRITAMENTE HARLOW SOLID APENAS NA FRASE DA CITAÇÃO */
         .quote-text {
             font-family: 'Harlow Solid', 'Harlow Solid Italic', 'Oleo Script', cursive !important;
             font-size: 1.6rem;
@@ -165,7 +192,7 @@
             color: #33103c;
         }
 
-        /* 3. SEÇÃO PROGRESS TRACKER (FULL WIDTH) */
+        /* 3. SEÇÃO ESPECIALIDADES (Antigo Progress Tracker) */
         .tracker-section {
             background-color: #580017;
             padding: 70px 40px;
@@ -213,6 +240,7 @@
 
         .tracker-icon img {
             width: 32px;
+            animation: stickerFadeIn 1s ease-out forwards;
         }
 
         .tracker-info h3 {
@@ -229,7 +257,7 @@
             color: #33103c;
         }
 
-        /* 4. SEÇÃO EXPERIÊNCIA (FULL WIDTH) */
+        /* 4. SEÇÃO EXPERIÊNCIA */
         .experience-section {
             background-color: #f7a8ca;
             padding: 70px 40px;
@@ -279,11 +307,12 @@
             color: #33103c;
         }
 
-        /* 5. SEÇÃO ALGUNS TRABALHOS (FULL WIDTH) */
+        /* 5. SEÇÃO ALGUNS TRABALHOS */
         .works-section {
             background-color: #4b134f;
             padding: 70px 40px;
             text-align: center;
+            position: relative;
         }
 
         .works-section h2 {
@@ -327,7 +356,15 @@
             font-family: 'Century Gothic', sans-serif;
         }
 
-        /* 6. SEÇÃO ENTRE EM CONTATO (FULL WIDTH) */
+        .laycat-sticker {
+            position: absolute;
+            bottom: 30px;
+            right: 40px;
+            width: 60px;
+            animation: stickerFadeIn 1s ease-out forwards;
+        }
+
+        /* 6. SEÇÃO ENTRE EM CONTATO */
         .contact-section {
             background-color: #f7a8ca;
             color: #580017;
@@ -381,11 +418,12 @@
             border-radius: 8px;
         }
 
-        .footer-sticker {
+        .bow-skull-sticker {
             position: absolute;
             bottom: 25px;
             left: 48%;
             width: 50px;
+            animation: stickerFadeIn 1s ease-out forwards;
         }
 
         /* ADAPTAÇÃO PARA CELULAR (MOBILE) */
@@ -419,7 +457,7 @@
         <section class="intro-section">
             <div class="content-wrapper intro-grid">
                 <div class="intro-left">
-                    <h1>Hi, I'm<br>Nath. <img src="images/skull.png" class="sticker" alt="sticker"></h1>
+                    <h1>Hi, I'm<br>Nath. <img src="images/skull.png" class="sticker" alt="skull"></h1>
                 </div>
                 <div class="intro-right">
                     <p>Sou professora de inglês há mais de 17 anos.</p>
@@ -430,34 +468,35 @@
 
         <!-- FOTO DE AVATAR (100% DA LARGURA DA TELA) -->
         <section class="profile-full-width">
-            <img src="images/avatar.jpg" alt="Nath Profile" class="profile-img">
-            <img src="images/panda.png" alt="Panda Sticker" class="panda-sticker">
+            <img src="images/nath_profile.jpeg" alt="Nath Profile" class="profile-img">
+            <img src="images/cat.png" alt="Cat Sticker" class="cat-sticker">
         </section>
 
         <!-- 2. FORMAÇÃO -->
-        <section class="education-grid">
+        <section class="education-grid scroll-reveal">
             <div class="quote-box">
-                <img src="images/train.jpg" alt="London Train">
+                <img src="images/train.jpeg" alt="London Train" class="train-img">
+                <img src="images/cat4.png" alt="Cat 4 Sticker" class="cat4-sticker">
                 <!-- ESTRITAMENTE HARLOW SOLID -->
                 <p class="quote-text">“What we learn with pleasure we never forget.” –<br>Alfred Mercier</p>
             </div>
             <div class="education-box">
-                <h2>Formação <img src="images/bat.png" class="sticker" alt="sticker"></h2>
+                <h2>Formação <img src="images/bookghost.png" class="sticker" alt="bookghost"></h2>
                 <p>Sistema da Universidade de Cambridge em ensino de inglês como língua estrangeira para adultos, com especialização em conversação.</p>
                 <p>Além disso, sou graduada em Relações Internacionais e Design Gráfico.</p>
             </div>
         </section>
 
-        <!-- 3. PROGRESS TRACKER -->
-        <section class="tracker-section">
+        <!-- 3. ESPECIALIDADES -->
+        <section class="tracker-section scroll-reveal">
             <div class="content-wrapper tracker-grid">
                 <div class="tracker-title">
-                    <h2>Progress<br>Tracker</h2>
+                    <h2>Especialidades</h2>
                 </div>
                 <div class="tracker-cards">
                     <div class="tracker-card">
                         <div class="tracker-icon">
-                            <img src="images/skull.png" alt="icon">
+                            <img src="images/ghost1.png" alt="Ghost 1">
                         </div>
                         <div class="tracker-info">
                             <h3>Conversação</h3>
@@ -467,7 +506,7 @@
 
                     <div class="tracker-card">
                         <div class="tracker-icon">
-                            <img src="images/skull.png" alt="icon">
+                            <img src="images/ghost2.png" alt="Ghost 2">
                         </div>
                         <div class="tracker-info">
                             <h3>Business English</h3>
@@ -477,7 +516,7 @@
 
                     <div class="tracker-card">
                         <div class="tracker-icon">
-                            <img src="images/skull.png" alt="icon">
+                            <img src="images/ghost3.png" alt="Ghost 3">
                         </div>
                         <div class="tracker-info">
                             <h3>Inglês Acadêmico</h3>
@@ -489,22 +528,22 @@
         </section>
 
         <!-- 4. EXPERIÊNCIA -->
-        <section class="experience-section">
+        <section class="experience-section scroll-reveal">
             <div class="content-wrapper">
-                <h2>Experiência <img src="images/bat.png" class="sticker" alt="sticker"></h2>
+                <h2>Experiência <img src="images/bookmark.png" class="sticker" alt="bookmark"></h2>
                 <div class="experience-grid">
                     <div class="exp-card">
-                        <img src="images/exp1.jpg" alt="Professora em Universidades">
+                        <img src="images/exp1.jpeg" alt="Professora em Universidades">
                         <h3>Professora em Universidades</h3>
                         <p>Ao longo dos anos, ministrou aulas nas melhores faculdades de línguas e literatura do país.</p>
                     </div>
                     <div class="exp-card">
-                        <img src="images/exp2.jpg" alt="Especialista em Educação">
+                        <img src="images/exp2.jpeg" alt="Especialista em Educação">
                         <h3>Especialista em Educação</h3>
                         <p>Foco constante em estratégias e métodos de ensino validados para o rápido aprendizado.</p>
                     </div>
                     <div class="exp-card">
-                        <img src="images/exp3.jpg" alt="Inglês como Língua Estrangeira">
+                        <img src="images/exp3.jpeg" alt="Inglês como Língua Estrangeira">
                         <h3>Inglês como Língua Estrangeira</h3>
                         <p>Mais de 10 mil horas de aulas lecionadas de forma prática e acolhedora.</p>
                     </div>
@@ -513,9 +552,9 @@
         </section>
 
         <!-- 5. ALGUNS TRABALHOS -->
-        <section class="works-section">
+        <section class="works-section scroll-reveal">
             <div class="content-wrapper">
-                <h2>Alguns Trabalhos <img src="images/cat.png" class="sticker" alt="sticker"></h2>
+                <h2>Alguns Trabalhos</h2>
                 <div class="works-grid">
                     <div class="work-card">
                         <img src="images/work1.jpg" alt="Work 1">
@@ -524,28 +563,35 @@
                     </div>
 
                     <div class="work-card">
-                        <img src="images/work2.jpg" alt="Work 2">
+                        <img src="images/work2.png" alt="Work 2">
                         <p>Aulas de inglês para alunos [...]</p>
                         <span>English Pathways, London 2022</span>
                     </div>
 
                     <div class="work-card">
-                        <img src="images/work3.jpg" alt="Work 3">
+                        <img src="images/work3.PNG" alt="Work 3">
                         <p>Material de prática e revisão para alunos de inglês</p>
                         <span>About Us Online, London 2022</span>
                     </div>
 
                     <div class="work-card">
-                        <img src="images/work4.jpg" alt="Work 4">
+                        <img src="images/work4.PNG" alt="Work 4">
+                        <p>Material complementar de apoio pedagógico</p>
+                        <span>London, 2022</span>
+                    </div>
+
+                    <div class="work-card" style="grid-column: 1 / -1; max-width: 50%; margin: 0 auto;">
+                        <img src="images/work5.png" alt="Work 5">
                         <p>Workshops de comunicação para entrevistas de emprego</p>
                         <span>Ministry of Justice UK, 2021</span>
                     </div>
                 </div>
             </div>
+            <img src="images/laycat.png" alt="Laycat Sticker" class="laycat-sticker">
         </section>
 
         <!-- 6. ENTRE EM CONTATO -->
-        <section class="contact-section">
+        <section class="contact-section scroll-reveal">
             <div class="content-wrapper contact-grid">
                 <div class="contact-left">
                     <h2>Entre em<br>Contato</h2>
@@ -559,14 +605,39 @@
                 </div>
                 
                 <div class="contact-right">
-                    <img src="images/contact_train.jpg" alt="Contact Train">
+                    <img src="images/contact_train.jpeg" alt="Contact Train">
                 </div>
             </div>
 
-            <img src="images/bow_skull.png" alt="Bow Skull Sticker" class="footer-sticker">
+            <img src="images/bow_skull.png" alt="Bow Skull Sticker" class="bow-skull-sticker">
         </section>
 
     </div>
 
+    <!-- Script JavaScript para o Fade-In exclusivo ao rolar para baixo -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -50px 0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    // Revela apenas se estiver rolando para baixo (boundingClientRect.top / y em relação ao viewport ou IntersectionRatio)
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        // Uma vez revelado, paramos de observar para garantir que nunca mais suma ao rolar para cima
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.scroll-reveal').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
