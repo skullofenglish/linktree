@@ -289,7 +289,7 @@
             line-height: 1.75;
         }
 
-        /* 3. SEÇÃO ESPECIALIDADES (FANTASMAS BEM MAIORES E PROPORCIONAIS) */
+        /* 3. SEÇÃO ESPECIALIDADES DESKTOP */
         .tracker-section {
             background-color: #6B0F1A;
             padding: 100px 60px;
@@ -320,14 +320,15 @@
             border-radius: 0;
             padding: 40px 45px;
             display: flex;
-            align-items: center; /* Alinhamento central vertical ideal para o ícone grande */
+            align-items: center;
             gap: 35px;
         }
 
         .tracker-icon {
-            width: 110px; /* Bloco dimensionado para acomodar o sticker grande */
+            width: 110px;
             height: 110px;
-            background-color: transparent;
+            background-color: transparent !important; /* Força transparência sem fundo branco */
+            background: none !important;
             border-radius: 0;
             display: flex;
             justify-content: center;
@@ -336,7 +337,7 @@
         }
 
         .tracker-icon img {
-            width: 95px; /* Fantasmas bem grandes e proporcionais ao card */
+            width: 95px;
             max-height: 100px;
             object-fit: contain;
         }
@@ -458,7 +459,6 @@
             font-family: 'Century Gothic', sans-serif;
         }
 
-        /* GATINHO ANCORADO AO FIM DA SECÇÃO DE TRABALHOS */
         .laycat-container {
             text-align: right;
             max-width: 1350px;
@@ -500,7 +500,6 @@
             line-height: 1.75;
         }
 
-        /* BOTÕES DE CONTATO COM ÍCONES INTEGRADOS */
         .contact-buttons-container {
             display: flex;
             flex-direction: column;
@@ -544,7 +543,6 @@
             fill: #6B0F1A;
         }
 
-        /* FOTO DO COMBOIO 100% INTEIRA */
         .contact-right {
             width: 100%;
             display: flex;
@@ -560,7 +558,6 @@
             display: block;
         }
 
-        /* GATINHO (CAT4) CENTRALIZADO NO RODAPÉ DA SECÇÃO DE CONTATO */
         .footer-cat-container {
             text-align: center;
             margin-top: 50px;
@@ -571,7 +568,9 @@
             display: inline-block;
         }
 
-        /* RESPONSIVIDADE MOBILE OTIMIZADA */
+        /* ======================================================== */
+        /* RESPONSIVIDADE MOBILE COMPLETA E CORRIGIDA */
+        /* ======================================================== */
         @media (max-width: 900px) {
             .nav-container {
                 padding: 15px 30px;
@@ -598,37 +597,47 @@
                 gap: 40px;
             }
             .intro-left h1, .education-box h2, .tracker-title h2, .experience-section h2, .works-section h2, .contact-left h2 {
-                font-size: 4.5rem;
+                font-size: 4.2rem;
             }
             .quote-text {
-                font-size: 1.6rem;
+                font-size: 1.5rem;
             }
             .intro-section, .tracker-section, .experience-section, .works-section, .contact-section {
-                padding: 60px 25px;
+                padding: 50px 20px;
             }
             .education-box {
-                padding: 50px 25px;
+                padding: 40px 20px;
             }
 
-            /* OTIMIZAÇÃO DOS CARDS E FANTASMAS MAIORES NO MOBILE */
-            .tracker-card {
-                padding: 28px 24px;
+            /* FIX MOBILE: CARDS E STICKERS DOS FANTASMAS (TRANSPARENTE + GRANDE) */
+            .tracker-cards {
                 gap: 20px;
             }
+            .tracker-card {
+                padding: 25px 20px;
+                gap: 20px;
+                display: flex;
+                align-items: center;
+            }
             .tracker-icon {
-                width: 85px;
-                height: 85px;
+                width: 85px !important;
+                height: 85px !important;
+                background-color: transparent !important; /* Garantia de fundo transparente no mobile */
+                background: none !important;
+                flex-shrink: 0;
             }
             .tracker-icon img {
-                width: 75px;
+                width: 80px !important; /* Fantasmas bem grandes no mobile */
+                max-height: 80px !important;
+                object-fit: contain;
             }
             .tracker-info h3 {
                 font-size: 1.4rem;
-                margin-bottom: 8px;
+                margin-bottom: 6px;
             }
             .tracker-info p {
                 font-size: 1.15rem;
-                line-height: 1.6;
+                line-height: 1.5;
             }
 
             .contact-buttons-container {
