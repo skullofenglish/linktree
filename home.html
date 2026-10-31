@@ -406,10 +406,10 @@
             color: #502064;
         }
 
-        /* 5. SEÇÃO ALGUNS TRABALHOS (Imagens Inteiras Sem Corte) */
+        /* 5. SEÇÃO ALGUNS TRABALHOS */
         .works-section {
             background-color: #502064;
-            padding: 100px 60px;
+            padding: 100px 60px 40px 60px;
             text-align: center;
             position: relative;
         }
@@ -456,18 +456,23 @@
             font-family: 'Century Gothic', sans-serif;
         }
 
-        .laycat-sticker {
-            position: absolute;
-            bottom: 40px;
-            right: 60px;
-            width: 120px;
+        /* GATINHO ANCORADO AO FIM DA SECÇÃO DE TRABALHOS */
+        .laycat-container {
+            text-align: right;
+            max-width: 1350px;
+            margin: 20px auto 0 auto;
         }
 
-        /* 6. SEÇÃO ENTRE EM CONTATO (DESIGN PROFISSIONAL DE ALTA CONFIANÇA) */
+        .laycat-container img {
+            width: 120px;
+            display: inline-block;
+        }
+
+        /* 6. SEÇÃO ENTRE EM CONTATO */
         .contact-section {
             background-color: #F48FB1;
             color: #502064;
-            padding: 100px 60px;
+            padding: 100px 60px 40px 60px;
             position: relative;
         }
 
@@ -553,11 +558,15 @@
             display: block;
         }
 
-        .bow-skull-sticker {
-            position: absolute;
-            bottom: 35px;
-            left: 48%;
+        /* BOW SKULL STICKER CENTRALIZADO NO RODAPÉ */
+        .bow-skull-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .bow-skull-container img {
             width: 110px;
+            display: inline-block;
         }
 
         /* RESPONSIVIDADE MOBILE */
@@ -765,7 +774,11 @@
                     </div>
                 </div>
             </div>
-            <img src="images/laycat.png" alt="Laycat Sticker" class="laycat-sticker sticker-breathe">
+
+            <!-- GATINHO ANCORADO COM SEGURANÇA NO CANTO DIREITO -->
+            <div class="laycat-container">
+                <img src="images/laycat.png" alt="Laycat Sticker" class="sticker-breathe">
+            </div>
         </section>
 
         <!-- 6. ENTRE EM CONTATO -->
@@ -796,7 +809,10 @@
                 </div>
             </div>
 
-            <img src="images/bow_skull.png" alt="Bow Skull Sticker" class="bow-skull-sticker sticker-breathe">
+            <!-- BOW SKULL STICKER CENTRALIZADO NO RODAPÉ -->
+            <div class="bow-skull-container">
+                <img src="images/bow_skull.png" alt="Bow Skull Sticker" class="sticker-breathe">
+            </div>
         </section>
 
     </div>
@@ -807,7 +823,6 @@
         const navMenu = document.getElementById('nav-menu');
         const progressBar = document.getElementById('progressBar');
 
-        // Toggle do Menu Hambúrguer Mobile
         hamburger.addEventListener('click', () => {
             navMenu.classList.toggle('active');
         });
@@ -818,7 +833,6 @@
             });
         });
 
-        // Atualização da Barra de Leitura no Scroll
         window.addEventListener('scroll', () => {
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -826,7 +840,6 @@
             progressBar.style.width = scrolled + '%';
         });
 
-        // Revelação das seções ao rolar para baixo
         document.addEventListener("DOMContentLoaded", function () {
             const observerOptions = {
                 root: null,
