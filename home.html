@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Meta Tags Otimizadas -->
+    <!-- SEO Meta Tags -->
     <title>Nath Lex | Professora de Inglês e Vivência Real na Inglaterra</title>
     <meta name="description" content="Professora de inglês há mais de 19 anos com 11 anos de vivência na Inglaterra. Aulas de conversação, Business English e inglês acadêmico com foco na vida real.">
     <meta name="keywords" content="professora de ingles, ingles online, conversacao em ingles, business english, ingles academico, cambridge">
     <meta name="author" content="Nath Lex">
     <link rel="canonical" href="https://www.nathlex.com/">
 
-    <!-- Open Graph / Redes Sociais -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Nath Lex | Professora de Inglês">
     <meta property="og:description" content="Aprenda inglês com quem viveu 11 anos na Inglaterra. Mais de 19 anos de experiência em ensino de inglês real e acadêmico.">
     <meta property="og:type" content="website">
 
-    <!-- Google Fonts: Parisienne para Títulos & Oleo Script como fallback para Harlow Solid -->
+    <!-- Google Fonts: Parisienne para Títulos & Oleo Script como fallback -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
@@ -51,21 +51,21 @@
             left: 0;
             width: 100%;
             background-color: rgba(88, 0, 23, 0.95);
-            backdrop-filter: blur(6px);
+            backdrop-filter: blur(8px);
             z-index: 1000;
             border-bottom: 1px solid rgba(255, 255, 255, 0.15);
         }
 
         .nav-container {
             width: 100%;
-            padding: 15px 50px;
+            padding: 18px 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .nav-logo-img {
-            height: 42px;
+            height: 50px;
             width: auto;
             display: block;
         }
@@ -73,13 +73,13 @@
         .nav-menu {
             list-style: none;
             display: flex;
-            gap: 40px;
+            gap: 45px;
         }
 
         .nav-menu li a {
             color: #ffffff;
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 1.25rem;
             font-family: 'Century Gothic', sans-serif;
             font-weight: bold;
             transition: opacity 0.2s;
@@ -89,7 +89,7 @@
             opacity: 0.7;
         }
 
-        /* Botão Hambúrguer para Mobile */
+        /* Hambúrguer Mobile */
         .hamburger {
             display: none;
             flex-direction: column;
@@ -100,7 +100,7 @@
         }
 
         .hamburger span {
-            width: 30px;
+            width: 32px;
             height: 3px;
             background-color: #ffffff;
             transition: 0.3s;
@@ -109,29 +109,29 @@
         .full-width-container {
             width: 100%;
             margin: 0 auto;
-            padding-top: 75px; /* Compensa o header fixo */
+            padding-top: 85px;
         }
 
         .content-wrapper {
-            max-width: 1280px;
+            max-width: 1350px;
             margin: 0 auto;
             width: 100%;
         }
 
-        /* TÍTULOS EM PARISIENNE (UX Typography Hierarchy) */
+        /* TÍTULOS EM PARISIENNE */
         h1, h2 {
             font-family: 'Parisienne', cursive, sans-serif !important;
             font-weight: normal;
         }
 
-        /* Animação e Tamanho Adequado dos Stickers (Maiores e Destacados) */
+        /* STICKERS BEM MAIORES E EM DESTAQUE */
         @keyframes stickerFadeIn {
             from { opacity: 0; transform: scale(0.9); }
             to { opacity: 1; transform: scale(1); }
         }
 
         .sticker-title {
-            height: 65px;
+            height: 90px;
             vertical-align: middle;
             margin-left: 15px;
             display: inline-block;
@@ -153,33 +153,33 @@
         .intro-section {
             background-color: #f7a8ca;
             color: #580017;
-            padding: 90px 50px;
+            padding: 100px 60px;
             position: relative;
         }
 
         .intro-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 70px;
             align-items: stretch;
         }
 
         .intro-left {
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Título no topo, corpo na base */
+            justify-content: space-between;
             height: 100%;
         }
 
         .intro-left h1 {
-            font-size: 6rem;
+            font-size: 7rem;
             color: #580017;
-            line-height: 1.05;
+            line-height: 1;
         }
 
         .intro-left-body p {
-            font-size: 1.35rem; /* Corpo de texto aumentado para legibilidade ideal */
-            margin-bottom: 22px;
+            font-size: 1.5rem; /* Aumentado significativamente */
+            margin-bottom: 25px;
             font-family: 'Century Gothic', sans-serif;
             color: #580017;
             line-height: 1.6;
@@ -194,18 +194,18 @@
         .intro-right img.profile-img {
             width: 100%;
             height: 100%;
-            min-height: 540px;
+            min-height: 580px;
             object-fit: cover;
             object-position: center;
-            border-radius: 0; /* Cantos estritamente retos */
+            border-radius: 0;
             display: block;
         }
 
         .cat-sticker {
             position: absolute;
-            right: -30px;
-            bottom: -30px;
-            width: 100px;
+            right: -35px;
+            bottom: -35px;
+            width: 130px; /* Sticker maior */
             z-index: 10;
             animation: stickerFadeIn 1s ease-out forwards;
         }
@@ -219,7 +219,7 @@
 
         .quote-box {
             background-color: #1a1a1a;
-            padding: 90px 50px;
+            padding: 100px 60px;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -230,17 +230,17 @@
 
         .quote-box img.train-img {
             width: 100%;
-            max-width: 440px;
-            height: 580px; /* Retrato imponente */
+            max-width: 480px;
+            height: 620px;
             object-fit: cover;
             object-position: center;
-            margin-bottom: 35px;
+            margin-bottom: 40px;
             border-radius: 0;
         }
 
         .quote-text {
             font-family: 'Harlow Solid', 'Harlow Solid Italic', 'Oleo Script', cursive !important;
-            font-size: 1.9rem;
+            font-size: 2.2rem;
             color: #ffffff;
             line-height: 1.4;
             font-weight: normal;
@@ -249,64 +249,64 @@
         .education-box {
             background-color: #bf8fcd;
             color: #33103c;
-            padding: 90px 50px;
+            padding: 100px 60px;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
 
         .education-box h2 {
-            font-size: 5.5rem;
-            margin-bottom: 30px;
+            font-size: 6.5rem;
+            margin-bottom: 35px;
             color: #33103c;
         }
 
         .education-box p {
-            font-size: 1.3rem;
-            margin-bottom: 25px;
+            font-size: 1.45rem;
+            margin-bottom: 28px;
             font-family: 'Century Gothic', sans-serif;
             color: #33103c;
             line-height: 1.6;
         }
 
-        /* 3. SEÇÃO ESPECIALIDADES (PROGRESS TRACKER) */
+        /* 3. SEÇÃO ESPECIALIDADES */
         .tracker-section {
             background-color: #580017;
-            padding: 90px 50px;
+            padding: 100px 60px;
         }
 
         .tracker-grid {
             display: grid;
             grid-template-columns: 1fr 1.3fr;
-            gap: 60px;
+            gap: 70px;
             align-items: flex-start;
         }
 
         .tracker-title h2 {
-            font-size: 5.5rem;
+            font-size: 6.5rem;
             color: #ffffff;
-            line-height: 1.1;
+            line-height: 1;
         }
 
         .tracker-cards {
             display: flex;
             flex-direction: column;
-            gap: 25px;
+            gap: 30px;
         }
 
         .tracker-card {
             background-color: #bf8fcd;
             color: #33103c;
             border-radius: 0;
-            padding: 32px 38px;
+            padding: 35px 40px;
             display: flex;
             align-items: flex-start;
-            gap: 25px;
+            gap: 30px;
         }
 
         .tracker-icon {
-            width: 70px;
-            height: 70px;
+            width: 80px;
+            height: 80px;
             background-color: #ffffff;
             border-radius: 0;
             display: flex;
@@ -316,20 +316,20 @@
         }
 
         .tracker-icon img {
-            width: 44px;
+            width: 55px;
             animation: stickerFadeIn 1s ease-out forwards;
         }
 
         .tracker-info h3 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
+            font-size: 1.6rem;
+            margin-bottom: 12px;
             font-weight: bold;
             font-family: 'Century Gothic', sans-serif;
             color: #33103c;
         }
 
         .tracker-info p {
-            font-size: 1.15rem;
+            font-size: 1.3rem;
             font-family: 'Century Gothic', sans-serif;
             color: #33103c;
             line-height: 1.6;
@@ -338,25 +338,25 @@
         /* 4. SEÇÃO EXPERIÊNCIA */
         .experience-section {
             background-color: #f7a8ca;
-            padding: 90px 50px;
+            padding: 100px 60px;
             text-align: center;
             color: #580017;
         }
 
         .experience-section h2 {
-            font-size: 5.5rem;
-            margin-bottom: 50px;
+            font-size: 6.5rem;
+            margin-bottom: 55px;
         }
 
         .experience-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            gap: 35px;
         }
 
         .exp-card {
             background-color: #bf8fcd;
-            padding: 35px 25px;
+            padding: 40px 30px;
             border-radius: 0;
             color: #33103c;
             text-align: center;
@@ -364,7 +364,7 @@
 
         .exp-card img {
             width: 100%;
-            height: 260px;
+            height: 280px;
             object-fit: cover;
             object-position: center;
             margin-bottom: 25px;
@@ -372,15 +372,15 @@
         }
 
         .exp-card h3 {
-            font-size: 1.35rem;
-            margin-bottom: 12px;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
             font-weight: bold;
             font-family: 'Century Gothic', sans-serif;
             color: #33103c;
         }
 
         .exp-card p {
-            font-size: 1.1rem;
+            font-size: 1.25rem;
             line-height: 1.6;
             font-family: 'Century Gothic', sans-serif;
             color: #33103c;
@@ -389,47 +389,42 @@
         /* 5. SEÇÃO ALGUNS TRABALHOS */
         .works-section {
             background-color: #4b134f;
-            padding: 90px 50px;
+            padding: 100px 60px;
             text-align: center;
             position: relative;
         }
 
         .works-section h2 {
-            font-size: 5.5rem;
-            margin-bottom: 50px;
+            font-size: 6.5rem;
+            margin-bottom: 55px;
             color: #ffffff;
         }
 
         .works-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 45px;
+            gap: 50px;
         }
 
         .work-card {
-            padding: 10px;
+            padding: 15px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
+        /* FOTOS EM TAMANHO INTEIRO (SEM CORTES) */
         .work-card img {
             width: 100%;
-            height: 350px;
-            object-fit: cover;
-            object-position: center;
-            margin-bottom: 22px;
+            max-height: 650px;
+            object-fit: contain; /* Exibe a imagem completa sem cortar */
+            background-color: rgba(255, 255, 255, 0.05); /* Fundo sutil se necessário */
+            margin-bottom: 25px;
             border-radius: 0;
         }
 
-        /* Imagens 3, 4 e 5 em Modo Retrato Alto e Imponente */
-        .work-card.portrait-mode img {
-            height: 560px;
-            object-fit: cover;
-        }
-
         .work-card p {
-            font-size: 1.2rem;
+            font-size: 1.35rem;
             color: #e0d0e8;
             font-family: 'Century Gothic', sans-serif;
             line-height: 1.5;
@@ -437,17 +432,17 @@
 
         .work-card span {
             display: block;
-            font-size: 1.05rem;
+            font-size: 1.15rem;
             color: #bfa0cb;
-            margin-top: 8px;
+            margin-top: 10px;
             font-family: 'Century Gothic', sans-serif;
         }
 
         .laycat-sticker {
             position: absolute;
-            bottom: 35px;
-            right: 50px;
-            width: 95px;
+            bottom: 40px;
+            right: 60px;
+            width: 120px; /* Sticker maior */
             animation: stickerFadeIn 1s ease-out forwards;
         }
 
@@ -455,27 +450,27 @@
         .contact-section {
             background-color: #f7a8ca;
             color: #580017;
-            padding: 90px 50px;
+            padding: 100px 60px;
             position: relative;
         }
 
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 70px;
             align-items: center;
         }
 
         .contact-left h2 {
-            font-size: 5.5rem;
-            line-height: 1.1;
-            margin-bottom: 25px;
+            font-size: 6.5rem;
+            line-height: 1;
+            margin-bottom: 30px;
             color: #580017;
         }
 
         .contact-left p {
-            font-size: 1.35rem;
-            margin-bottom: 35px;
+            font-size: 1.5rem;
+            margin-bottom: 40px;
             font-family: 'Century Gothic', sans-serif;
             color: #580017;
             line-height: 1.6;
@@ -484,14 +479,14 @@
         .contact-links {
             display: flex;
             flex-direction: column;
-            gap: 18px;
+            gap: 22px;
         }
 
         .contact-links a {
             color: #580017;
             text-decoration: underline;
             font-weight: bold;
-            font-size: 1.35rem;
+            font-size: 1.5rem;
             font-family: 'Century Gothic', sans-serif;
             transition: opacity 0.2s;
         }
@@ -502,7 +497,7 @@
 
         .contact-right img {
             width: 100%;
-            height: 520px;
+            height: 580px;
             object-fit: cover;
             object-position: center;
             border-radius: 0;
@@ -510,16 +505,16 @@
 
         .bow-skull-sticker {
             position: absolute;
-            bottom: 35px;
+            bottom: 40px;
             left: 48%;
-            width: 90px;
+            width: 110px; /* Sticker maior */
             animation: stickerFadeIn 1s ease-out forwards;
         }
 
-        /* RESPONSIVIDADE MOBILE (UX adaptativa) */
+        /* RESPONSIVIDADE MOBILE */
         @media (max-width: 900px) {
             .nav-container {
-                padding: 15px 25px;
+                padding: 15px 30px;
             }
             .hamburger {
                 display: flex;
@@ -542,22 +537,18 @@
                 grid-template-columns: 1fr;
             }
             .intro-left h1, .education-box h2, .tracker-title h2, .experience-section h2, .works-section h2, .contact-left h2 {
-                font-size: 4rem;
+                font-size: 4.5rem;
             }
             .quote-text {
-                font-size: 1.5rem;
+                font-size: 1.6rem;
             }
             .intro-section, .tracker-section, .experience-section, .works-section, .contact-section {
-                padding: 60px 25px;
+                padding: 60px 30px;
             }
             .education-box {
-                padding: 50px 25px;
+                padding: 50px 30px;
             }
-            .work-card.portrait-mode img {
-                max-width: 100% !important;
-                height: 420px;
-            }
-            .work-card[style*="max-width: 50%"] {
+            .work-card[style*="max-width: 50%"], .work-card[style*="max-width: 52%"] {
                 max-width: 100% !important;
             }
         }
@@ -683,7 +674,7 @@
             </div>
         </section>
 
-        <!-- 5. ALGUNS TRABALHOS -->
+        <!-- 5. ALGUNS TRABALHOS (Imagens Inteiras Sem Corte) -->
         <section id="trabalhos" class="works-section scroll-reveal">
             <div class="content-wrapper">
                 <h2>Alguns Trabalhos</h2>
@@ -700,22 +691,19 @@
                         <span>English Pathway, London 2022</span>
                     </div>
 
-                    <!-- Imagem 3 em Modo Retrato Alto -->
-                    <div class="work-card portrait-mode">
+                    <div class="work-card">
                         <img src="images/work3.PNG" alt="Trabalho 3: Material de Prática">
                         <p>Material de prática e revisão para aluno particular</p>
                         <span>Aluna Lua Deleu, London 2022</span>
                     </div>
 
-                    <!-- Imagem 4 em Modo Retrato Alto -->
-                    <div class="work-card portrait-mode">
+                    <div class="work-card">
                         <img src="images/work4.PNG" alt="Trabalho 4: Workbook de Entrevistas">
                         <p>Workbook comunicação em entrevistas de emprego</p>
                         <span>Ministry of Justice UK, 2025</span>
                     </div>
 
-                    <!-- Imagem 5 em Modo Retrato Alto (Centralizada) -->
-                    <div class="work-card portrait-mode" style="grid-column: 1 / -1; max-width: 52%; margin: 0 auto;">
+                    <div class="work-card" style="grid-column: 1 / -1; max-width: 55%; margin: 0 auto;">
                         <img src="images/work5.png" alt="Trabalho 5: Workshops de Comunicação">
                         <p>Workshops de comunicação para entrevistas de emprego</p>
                         <span>Ministry of Justice UK, 2021</span>
@@ -749,7 +737,7 @@
 
     </div>
 
-    <!-- Scripts de Interatividade (Menu Hambúrguer e Scroll Reveal) -->
+    <!-- Scripts -->
     <script>
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
