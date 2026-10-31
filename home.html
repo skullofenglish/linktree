@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hi, I'm Nath</title>
     
-    <!-- Google Fonts: Pinyon Script para Títulos & Oleo Script como fallback da Harlow Solid -->
+    <!-- Google Fonts: Oleo Script como fallback para Harlow Solid -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
+        /* Importação da Fonte Amoresa */
+        @font-face {
+            font-family: 'Amoresa';
+            src: local('Amoresa'), url('fonts/Amoresa.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         /* Fonte Harlow Solid */
         @font-face {
             font-family: 'Harlow Solid';
@@ -27,13 +35,13 @@
             font-family: 'Century Gothic', sans-serif;
             background-color: #580017;
             color: #ffffff;
-            line-height: 1.5;
+            line-height: 1.6;
             width: 100%;
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
 
-        /* MENU DE NAVEGAÇÃO SUPERIOR (TRADICIONAL / HAMBÚRGUER) */
+        /* MENU DE NAVEGAÇÃO SUPERIOR (100% DE LARGURA) */
         header.site-header {
             position: fixed;
             top: 0;
@@ -42,36 +50,35 @@
             background-color: rgba(88, 0, 23, 0.95);
             backdrop-filter: blur(5px);
             z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
         }
 
         .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 15px 40px;
+            width: 100%;
+            padding: 12px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .nav-logo {
-            font-family: 'Pinyon Script', cursive;
-            font-size: 2rem;
-            color: #ffffff;
-            text-decoration: none;
+        .nav-logo-img {
+            height: 38px;
+            width: auto;
+            display: block;
         }
 
         .nav-menu {
             list-style: none;
             display: flex;
-            gap: 30px;
+            gap: 35px;
         }
 
         .nav-menu li a {
             color: #ffffff;
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 1.05rem;
             font-family: 'Century Gothic', sans-serif;
+            font-weight: bold;
             transition: opacity 0.2s;
         }
 
@@ -99,18 +106,18 @@
         .full-width-container {
             width: 100%;
             margin: 0 auto;
-            padding-top: 60px; /* Espaço para o header fixo */
+            padding-top: 65px; /* Compensação do cabeçalho fixo */
         }
 
         .content-wrapper {
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
             width: 100%;
         }
 
-        /* TÍTULOS ESTRITAMENTE EM PINYON SCRIPT */
+        /* TÍTULOS ESTRITAMENTE EM AMORESA */
         h1, h2 {
-            font-family: 'Pinyon Script', cursive !important;
+            font-family: 'Amoresa', cursive, sans-serif !important;
             font-weight: normal;
         }
 
@@ -121,14 +128,14 @@
         }
 
         .sticker {
-            height: 40px;
+            height: 45px;
             vertical-align: middle;
-            margin-left: 8px;
+            margin-left: 10px;
             display: inline-block;
             animation: stickerFadeIn 1s ease-out forwards;
         }
 
-        /* Efeito de Scroll Reveal (Aparece apenas ao descer a página pela primeira vez) */
+        /* Efeito de Scroll Reveal */
         .scroll-reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -140,30 +147,37 @@
             transform: translateY(0);
         }
 
-        /* 1. SEÇÃO INTRODUÇÃO (Layout Ajustado Conforme Referência) */
+        /* 1. SEÇÃO INTRODUÇÃO */
         .intro-section {
             background-color: #f7a8ca;
             color: #580017;
-            padding: 80px 40px;
+            padding: 80px 50px;
             position: relative;
         }
 
         .intro-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
+            gap: 60px;
+            align-items: stretch; /* Alinha a altura da foto e do texto */
+        }
+
+        .intro-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Título no topo, corpo ao fim */
+            height: 100%;
         }
 
         .intro-left h1 {
-            font-size: 4.5rem;
+            font-size: 5rem;
             color: #580017;
             line-height: 1.1;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
-        .intro-left p {
-            font-size: 1.05rem;
+        .intro-left-body p {
+            font-size: 1.25rem; /* Aumentado para melhor legibilidade */
             margin-bottom: 20px;
             font-family: 'Century Gothic', sans-serif;
             color: #580017;
@@ -173,22 +187,24 @@
         .intro-right {
             position: relative;
             width: 100%;
+            height: 100%;
         }
 
         .intro-right img.profile-img {
             width: 100%;
-            max-height: 480px;
+            height: 100%;
+            min-height: 520px; /* Maior altura para destacar */
             object-fit: cover;
-            border-radius: 0; /* Cantos estritamente retos */
+            object-position: center;
+            border-radius: 0; /* Cantos retos */
             display: block;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
 
         .cat-sticker {
             position: absolute;
-            right: -20px;
+            right: -25px;
             bottom: -25px;
-            width: 70px;
+            width: 75px;
             z-index: 10;
             animation: stickerFadeIn 1s ease-out forwards;
         }
@@ -202,7 +218,7 @@
 
         .quote-box {
             background-color: #1a1a1a;
-            padding: 70px 40px;
+            padding: 80px 50px;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -213,18 +229,17 @@
 
         .quote-box img.train-img {
             width: 100%;
-            max-width: 380px;
-            height: 460px;
+            max-width: 420px;
+            height: 560px; /* Modo Retrato alto */
             object-fit: cover;
             object-position: center;
             margin-bottom: 30px;
-            border-radius: 0; /* Cantos retos */
+            border-radius: 0;
         }
 
-        /* ESTRITAMENTE HARLOW SOLID APENAS NA FRASE DA CITAÇÃO */
         .quote-text {
             font-family: 'Harlow Solid', 'Harlow Solid Italic', 'Oleo Script', cursive !important;
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             color: #ffffff;
             line-height: 1.4;
             font-weight: normal;
@@ -233,21 +248,21 @@
         .education-box {
             background-color: #bf8fcd;
             color: #33103c;
-            padding: 70px 50px;
+            padding: 80px 50px;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
 
         .education-box h2 {
-            font-size: 4.5rem;
-            margin-bottom: 25px;
+            font-size: 5rem;
+            margin-bottom: 30px;
             color: #33103c;
         }
 
         .education-box p {
-            font-size: 1rem;
-            margin-bottom: 20px;
+            font-size: 1.2rem;
+            margin-bottom: 22px;
             font-family: 'Century Gothic', sans-serif;
             color: #33103c;
             line-height: 1.6;
@@ -256,18 +271,18 @@
         /* 3. SEÇÃO ESPECIALIDADES */
         .tracker-section {
             background-color: #580017;
-            padding: 80px 40px;
+            padding: 90px 50px;
         }
 
         .tracker-grid {
             display: grid;
             grid-template-columns: 1fr 1.3fr;
-            gap: 40px;
+            gap: 50px;
             align-items: flex-start;
         }
 
         .tracker-title h2 {
-            font-size: 4.5rem;
+            font-size: 5rem;
             color: #ffffff;
             line-height: 1.1;
         }
@@ -275,24 +290,24 @@
         .tracker-cards {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 25px;
         }
 
         .tracker-card {
             background-color: #bf8fcd;
             color: #33103c;
-            border-radius: 0; /* Cantos retos */
-            padding: 25px 30px;
+            border-radius: 0;
+            padding: 30px 35px;
             display: flex;
             align-items: flex-start;
-            gap: 20px;
+            gap: 25px;
         }
 
         .tracker-icon {
-            width: 55px;
-            height: 55px;
+            width: 60px;
+            height: 60px;
             background-color: #ffffff;
-            border-radius: 0; /* Cantos retos */
+            border-radius: 0;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -300,12 +315,12 @@
         }
 
         .tracker-icon img {
-            width: 32px;
+            width: 36px;
             animation: stickerFadeIn 1s ease-out forwards;
         }
 
         .tracker-info h3 {
-            font-size: 1.2rem;
+            font-size: 1.35rem;
             margin-bottom: 8px;
             font-weight: bold;
             font-family: 'Century Gothic', sans-serif;
@@ -313,59 +328,59 @@
         }
 
         .tracker-info p {
-            font-size: 0.9rem;
+            font-size: 1.1rem;
             font-family: 'Century Gothic', sans-serif;
             color: #33103c;
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         /* 4. SEÇÃO EXPERIÊNCIA */
         .experience-section {
             background-color: #f7a8ca;
-            padding: 80px 40px;
+            padding: 90px 50px;
             text-align: center;
             color: #580017;
         }
 
         .experience-section h2 {
-            font-size: 4.5rem;
-            margin-bottom: 40px;
+            font-size: 5rem;
+            margin-bottom: 45px;
         }
 
         .experience-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            gap: 30px;
         }
 
         .exp-card {
             background-color: #bf8fcd;
-            padding: 25px 20px;
-            border-radius: 0; /* Cantos retos */
+            padding: 30px 25px;
+            border-radius: 0;
             color: #33103c;
             text-align: center;
         }
 
         .exp-card img {
             width: 100%;
-            height: 180px;
+            height: 240px;
             object-fit: cover;
-            object-position: center; /* Ajustável para reposicionamento */
-            margin-bottom: 18px;
-            border-radius: 0; /* Cantos retos */
+            object-position: center; /* Reposicionável */
+            margin-bottom: 22px;
+            border-radius: 0;
         }
 
         .exp-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
+            font-size: 1.25rem;
+            margin-bottom: 12px;
             font-weight: bold;
             font-family: 'Century Gothic', sans-serif;
             color: #33103c;
         }
 
         .exp-card p {
-            font-size: 0.85rem;
-            line-height: 1.5;
+            font-size: 1.05rem;
+            line-height: 1.6;
             font-family: 'Century Gothic', sans-serif;
             color: #33103c;
         }
@@ -373,21 +388,21 @@
         /* 5. SEÇÃO ALGUNS TRABALHOS */
         .works-section {
             background-color: #4b134f;
-            padding: 80px 40px;
+            padding: 90px 50px;
             text-align: center;
             position: relative;
         }
 
         .works-section h2 {
-            font-size: 4.5rem;
-            margin-bottom: 40px;
+            font-size: 5rem;
+            margin-bottom: 45px;
             color: #ffffff;
         }
 
         .works-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 35px;
+            gap: 40px;
         }
 
         .work-card {
@@ -401,31 +416,37 @@
             width: 100%;
             height: 320px;
             object-fit: cover;
-            object-position: center; /* Ajustável para reposicionamento */
-            margin-bottom: 18px;
-            border-radius: 0; /* Cantos retos */
+            object-position: center; /* Reposicionável */
+            margin-bottom: 20px;
+            border-radius: 0;
+        }
+
+        /* Imagens 3, 4 e 5 em Modo Retrato Alto */
+        .work-card.portrait-mode img {
+            height: 520px;
+            object-fit: cover;
         }
 
         .work-card p {
-            font-size: 0.92rem;
+            font-size: 1.15rem;
             color: #e0d0e8;
             font-family: 'Century Gothic', sans-serif;
-            line-height: 1.4;
+            line-height: 1.5;
         }
 
         .work-card span {
             display: block;
-            font-size: 0.85rem;
+            font-size: 1rem;
             color: #bfa0cb;
-            margin-top: 6px;
+            margin-top: 8px;
             font-family: 'Century Gothic', sans-serif;
         }
 
         .laycat-sticker {
             position: absolute;
             bottom: 30px;
-            right: 40px;
-            width: 65px;
+            right: 50px;
+            width: 70px;
             animation: stickerFadeIn 1s ease-out forwards;
         }
 
@@ -433,43 +454,43 @@
         .contact-section {
             background-color: #f7a8ca;
             color: #580017;
-            padding: 80px 40px;
+            padding: 90px 50px;
             position: relative;
         }
 
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
+            gap: 60px;
             align-items: center;
         }
 
         .contact-left h2 {
-            font-size: 4.5rem;
+            font-size: 5rem;
             line-height: 1.1;
             margin-bottom: 25px;
             color: #580017;
         }
 
         .contact-left p {
-            font-size: 1.05rem;
+            font-size: 1.25rem;
             margin-bottom: 35px;
             font-family: 'Century Gothic', sans-serif;
             color: #580017;
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         .contact-links {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 18px;
         }
 
         .contact-links a {
             color: #580017;
             text-decoration: underline;
-            font-weight: 600;
-            font-size: 1.1rem;
+            font-weight: bold;
+            font-size: 1.3rem;
             font-family: 'Century Gothic', sans-serif;
             transition: opacity 0.2s;
         }
@@ -480,21 +501,25 @@
 
         .contact-right img {
             width: 100%;
-            height: 420px;
+            height: 500px;
             object-fit: cover;
-            border-radius: 0; /* Cantos retos */
+            object-position: center; /* Reposicionável */
+            border-radius: 0;
         }
 
         .bow-skull-sticker {
             position: absolute;
-            bottom: 25px;
+            bottom: 30px;
             left: 48%;
-            width: 55px;
+            width: 60px;
             animation: stickerFadeIn 1s ease-out forwards;
         }
 
-        /* ADAPTAÇÃO PARA CELULAR (MOBILE E MENU HAMBÚRGUER) */
-        @media (max-width: 768px) {
+        /* ADAPTAÇÃO PARA DISPOSITIVOS MÓVEIS */
+        @media (max-width: 900px) {
+            .nav-container {
+                padding: 12px 25px;
+            }
             .hamburger {
                 display: flex;
             }
@@ -506,8 +531,8 @@
                 left: 0;
                 width: 100%;
                 background-color: #580017;
-                padding: 20px 40px;
-                border-bottom: 1px solid rgba(255,255,255,1.1);
+                padding: 25px 30px;
+                border-bottom: 1px solid rgba(255,255,255,0.2);
             }
             .nav-menu.active {
                 display: flex;
@@ -516,26 +541,34 @@
                 grid-template-columns: 1fr;
             }
             .intro-left h1, .education-box h2, .tracker-title h2, .experience-section h2, .works-section h2, .contact-left h2 {
-                font-size: 3.2rem;
+                font-size: 3.5rem;
             }
             .quote-text {
-                font-size: 1.3rem;
+                font-size: 1.4rem;
             }
             .intro-section, .tracker-section, .experience-section, .works-section, .contact-section {
-                padding: 50px 20px;
+                padding: 60px 25px;
             }
             .education-box {
-                padding: 40px 25px;
+                padding: 50px 25px;
+            }
+            .work-card.portrait-mode img, .work-card style {
+                max-width: 100% !important;
+            }
+            .work-card[style*="max-width: 50%"] {
+                max-width: 100% !important;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- MENU DE NAVEGAÇÃO -->
+    <!-- MENU DE NAVEGAÇÃO SUPERIOR (100% LARGURA) -->
     <header class="site-header">
         <div class="nav-container">
-            <a href="#intro" class="nav-logo">Nath Lex</a>
+            <a href="#intro">
+                <img src="images/skull.png" alt="Skull Logo" class="nav-logo-img">
+            </a>
             <button class="hamburger" id="hamburger" aria-label="Menu">
                 <span></span>
                 <span></span>
@@ -559,8 +592,10 @@
             <div class="content-wrapper intro-grid">
                 <div class="intro-left">
                     <h1>Hi, I'm<br>Nath. <img src="images/skull.png" class="sticker" alt="skull"></h1>
-                    <p>Sou professora de inglês há mais de 19 anos.</p>
-                    <p>Morei, trabalhei e estudei na Inglaterra por 11 anos, e trago toda a experiência de viver a língua de verdade para te ensinar o inglês da vida real!</p>
+                    <div class="intro-left-body">
+                        <p>Sou professora de inglês há mais de 19 anos.</p>
+                        <p>Morei, trabalhei e estudei na Inglaterra por 11 anos, e trago toda a experiência de viver a língua de verdade para te ensinar o inglês da vida real!</p>
+                    </div>
                 </div>
                 <div class="intro-right">
                     <img src="images/nath_profile.jpeg" alt="Nath Profile" class="profile-img">
@@ -573,7 +608,6 @@
         <section id="formacao" class="education-grid scroll-reveal">
             <div class="quote-box">
                 <img src="images/train.jpeg" alt="London Train" class="train-img">
-                <!-- ESTRITAMENTE HARLOW SOLID -->
                 <p class="quote-text">“What we learn with pleasure we never forget.” –<br>Alfred Mercier</p>
             </div>
             <div class="education-box">
@@ -664,20 +698,23 @@
                         <span>English Pathway, London 2022</span>
                     </div>
 
-                    <div class="work-card">
-                        <img src="images/work3.PNG" alt="Work 3" style="height: 400px; object-fit: cover;">
+                    <!-- Imagem 3 em Modo Retrato Alto -->
+                    <div class="work-card portrait-mode">
+                        <img src="images/work3.PNG" alt="Work 3">
                         <p>Material de prática e revisão para aluno particular</p>
                         <span>Aluna Lua Deleu, London 2022</span>
                     </div>
 
-                    <div class="work-card">
-                        <img src="images/work4.PNG" alt="Work 4" style="height: 400px; object-fit: cover;">
+                    <!-- Imagem 4 em Modo Retrato Alto -->
+                    <div class="work-card portrait-mode">
+                        <img src="images/work4.PNG" alt="Work 4">
                         <p>Workbook comunicação em entrevistas de emprego</p>
                         <span>Ministry of Justice UK, 2025</span>
                     </div>
 
-                    <div class="work-card" style="grid-column: 1 / -1; max-width: 50%; margin: 0 auto;">
-                        <img src="images/work5.png" alt="Work 5" style="height: 400px; object-fit: cover;">
+                    <!-- Imagem 5 em Modo Retrato Alto (Centralizada) -->
+                    <div class="work-card portrait-mode" style="grid-column: 1 / -1; max-width: 50%; margin: 0 auto;">
+                        <img src="images/work5.png" alt="Work 5">
                         <p>Workshops de comunicação para entrevistas de emprego</p>
                         <span>Ministry of Justice UK, 2021</span>
                     </div>
@@ -710,7 +747,7 @@
 
     </div>
 
-    <!-- Scripts: Menu Hambúrguer e Fade-In ao Rolar para Baixo -->
+    <!-- Scripts do Menu Hambúrguer e Scroll Reveal -->
     <script>
         // Toggle do Menu Hambúrguer Mobile
         const hamburger = document.getElementById('hamburger');
@@ -720,14 +757,13 @@
             navMenu.classList.toggle('active');
         });
 
-        // Fechar o menu ao clicar em um link
         document.querySelectorAll('.nav-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
             });
         });
 
-        // Fade-In exclusivo ao rolar para baixo
+        // Revelação ao rolar para baixo (scroll-reveal)
         document.addEventListener("DOMContentLoaded", function () {
             const observerOptions = {
                 root: null,
